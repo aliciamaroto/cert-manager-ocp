@@ -1,0 +1,21 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: letsencrypt-staging-account-key
+    solvers:
+      - dns01:
+        azureDNS:
+          clientID: $CLIENT_ID
+          clientSecretSecretRef:
+            name: azuredns-config
+            key: clientSecret
+          subscriptionID: $SUBSCRIPTION_ID
+          tenantID: $TENANT_ID
+          resourceGroupName: $RESOURCE_GROUP
+          hostedZoneName: amaroton.pmfw2.azure.redhatworkshops.io
+          environment: AzurePublicCloud

@@ -1,0 +1,17 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ocp-api
+  namespace: openshift-config
+spec:
+  isCA: false
+  duration: 90d
+  renewBefore: 30d
+  commonName: "api.amaroton.pmfw2.azure.redhatworkshops.io" 
+  dnsNames:
+  - "api.amaroton.pmfw2.azure.redhatworkshops.io" 
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+    group: cert-manager.io
+  secretName: api-certs

@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ocp-ingress
+  namespace: openshift-ingress
+spec:
+  isCA: false
+  duration: 90d
+  renewBefore: 30d
+  commonName: "*.apps.amaroton.pmfw2.azure.redhatworkshops.io"
+  dnsNames:
+  - "apps.amaroton.pmfw2.azure.redhatworkshops.io"
+  - "*.apps.amaroton.pmfw2.azure.redhatworkshops.io"
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+    group: cert-manager.io
+  secretName: ingress-certs
