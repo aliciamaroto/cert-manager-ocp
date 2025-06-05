@@ -6,6 +6,6 @@ spec:
   servingCerts:
     namedCertificates:
     - names:
-      - api.amaroton.pmfw2.azure.redhatworkshops.io
+        - "api.<cluster-name>.<hosted-zone-name>"
       servingCertificate:
-        name: ocp-api
+        name: api-certs

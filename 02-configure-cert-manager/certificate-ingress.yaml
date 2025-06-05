@@ -5,12 +5,12 @@ metadata:
   namespace: openshift-ingress
 spec:
   isCA: false
-  duration: 90d
-  renewBefore: 30d
-  commonName: "*.apps.amaroton.pmfw2.azure.redhatworkshops.io"
+  duration: 2160h # 90 days
+  renewBefore: 720h # 30 days
+  commonName: "apps.<cluster-name>. <hosted-zone-name>"
   dnsNames:
-  - "apps.amaroton.pmfw2.azure.redhatworkshops.io"
-  - "*.apps.amaroton.pmfw2.azure.redhatworkshops.io"
+  - "apps.<cluster-name>. <hosted-zone-name>"
+  - "*.apps.<cluster-name>. <hosted-zone-name>"
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer

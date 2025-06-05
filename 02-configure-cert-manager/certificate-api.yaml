@@ -5,11 +5,11 @@ metadata:
   namespace: openshift-config
 spec:
   isCA: false
-  duration: 90d
-  renewBefore: 30d
-  commonName: "api.amaroton.pmfw2.azure.redhatworkshops.io" 
+  duration: 2160h # 90 days
+  renewBefore: 720h # 30 days
+  commonName: "api.<cluster-name>. <hosted-zone-name>" 
   dnsNames:
-  - "api.amaroton.pmfw2.azure.redhatworkshops.io" 
+  - "api.<cluster-name>. <hosted-zone-name>" 
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer

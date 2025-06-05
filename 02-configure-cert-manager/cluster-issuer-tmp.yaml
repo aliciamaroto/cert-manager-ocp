@@ -4,11 +4,11 @@ metadata:
   name: letsencrypt
 spec:
   acme:
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
-      name: letsencrypt-staging-account-key
+      name: letsencrypt-account-key
     solvers:
-      - dns01:
+    - dns01:
         azureDNS:
           clientID: $CLIENT_ID
           clientSecretSecretRef:
@@ -17,5 +17,5 @@ spec:
           subscriptionID: $SUBSCRIPTION_ID
           tenantID: $TENANT_ID
           resourceGroupName: $RESOURCE_GROUP
-          hostedZoneName: amaroton.pmfw2.azure.redhatworkshops.io
+          hostedZoneName: <hosted-zone-name>
           environment: AzurePublicCloud
