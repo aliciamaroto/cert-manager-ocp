@@ -7,10 +7,10 @@ spec:
   isCA: false
   duration: 2160h # 90 days
   renewBefore: 720h # 30 days
-  commonName: "apps.<cluster-name>. <hosted-zone-name>"
+  commonName: "apps.amaroton.bvmrc.azure.redhatworkshops.io"
   dnsNames:
-  - "apps.<cluster-name>. <hosted-zone-name>"
-  - "*.apps.<cluster-name>. <hosted-zone-name>"
+  - "apps.amaroton.bvmrc.azure.redhatworkshops.io"
+  - "*.apps.amaroton.bvmrc.azure.redhatworkshops.io"
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer

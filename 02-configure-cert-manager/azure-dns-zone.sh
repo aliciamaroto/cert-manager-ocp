@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Get DNS zone in Azure for cert-manager. Resource group where the DNS zone is created.
-RESOURCE_GROUP=<resource-group-name>
-ZONE_NAME=<hosted-zone-name> 
+RESOURCE_GROUP=openenv-bvmrc
+ZONE_NAME=bvmrc.azure.redhatworkshops.io
+
 # Make sure to replace <resource-group-name> and <hosted-zone-name> with your actual values"
 
 

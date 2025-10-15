@@ -1,0 +1,4 @@
+export RESOURCE_GROUP=openenv-bvmrc
+export SUBSCRIPTION_ID=7598d218-6d54-4ed2-9f3a-533610e4e1e5
+export CLIENT_ID=53c6af15-16e8-4866-959c-fa50f7bcdf13
+export TENANT_ID=64dc69e4-d083-49fc-9569-ebece1dd1408
